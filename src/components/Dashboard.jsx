@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Img1 from '../../assets/img1.jpg';
-import tutorialsdev from '../../assets/tutorialsdev.png';
+
 import Input from './Input';
 import { io } from 'socket.io-client';
 
@@ -100,7 +99,7 @@ const Dashboard = () => {
 		<div className='w-screen flex'>
 			<div className='w-[25%] h-screen bg-secondary overflow-scroll'>
 				<div className='flex items-center my-8 mx-14'>
-					<div><img src={tutorialsdev} width={75} height={75} className='border border-primary p-[2px] rounded-full' /></div>
+					<div><img src={"#"} width={75} height={75} className='border border-primary p-[2px] rounded-full' /></div>
 					<div className='ml-8'>
 						<h3 className='text-2xl'>{user?.fullName}</h3>
 						<p className='text-lg font-light'>My Account</p>
@@ -116,7 +115,7 @@ const Dashboard = () => {
 									return (
 										<div className='flex items-center py-8 border-b border-b-gray-300'>
 											<div className='cursor-pointer flex items-center' onClick={() => fetchMessages(conversationId, user)}>
-												<div><img src={Img1} className="w-[60px] h-[60px] rounded-full p-[2px] border border-primary" /></div>
+												<div><img src={"#"} className="w-[60px] h-[60px] rounded-full p-[2px] border border-primary" /></div>
 												<div className='ml-6'>
 													<h3 className='text-lg font-semibold'>{user?.fullName}</h3>
 													<p className='text-sm font-light text-gray-600'>{user?.email}</p>
@@ -133,7 +132,7 @@ const Dashboard = () => {
 				{
 					messages?.receiver?.fullName &&
 					<div className='w-[75%] bg-secondary h-[80px] my-14 rounded-full flex items-center px-14 py-2'>
-						<div className='cursor-pointer'><img src={Img1} width={60} height={60} className="rounded-full" /></div>
+						<div className='cursor-pointer'><img src={"#"} width={60} height={60} className="rounded-full" /></div>
 						<div className='ml-6 mr-auto'>
 							<h3 className='text-lg'>{messages?.receiver?.fullName}</h3>
 							<p className='text-sm font-light text-gray-600'>{messages?.receiver?.email}</p>
@@ -194,7 +193,7 @@ const Dashboard = () => {
 								return (
 									<div className='flex items-center py-8 border-b border-b-gray-300'>
 										<div className='cursor-pointer flex items-center' onClick={() => fetchMessages('new', user)}>
-											<div><img src={Img1} className="w-[60px] h-[60px] rounded-full p-[2px] border border-primary" /></div>
+											<div><img src={"#"} className="w-[60px] h-[60px] rounded-full p-[2px] border border-primary" /></div>
 											<div className='ml-6'>
 												<h3 className='text-lg font-semibold'>{user?.fullName}</h3>
 												<p className='text-sm font-light text-gray-600'>{user?.email}</p>
